@@ -151,6 +151,19 @@ and combustion has not yet started.
 The animation shows the spray phase (0–1.25 ms), droplet evaporation and fuel-vapour
 mixing (1.25–2 ms), and the combustion event (2–10 ms).
 
+### Ignition Mechanism
+
+There is no spark or ignition source. Combustion is triggered by **thermal autoignition**: the
+initial gas temperature (800 K) and pressure (5 MPa) are above n-heptane's autoignition
+threshold, so once sufficient C₇H₁₆ vapour has evaporated and mixed with the surrounding
+O₂-rich gas, the Arrhenius rate becomes self-sustaining. The ODE chemistry solver integrates
+the single-step reaction at every cell each timestep; as the exothermic reaction releases heat
+the local temperature rises, which exponentially accelerates the rate, triggering thermal
+runaway. The ~2 ms delay between injection start and the temperature spike visible in the
+convergence plot is the **ignition delay period** — the time required for enough vapour to
+accumulate and for the slow low-temperature chemistry to heat the mixture to runaway. Measuring
+and validating this ignition delay is the primary purpose of the Aachen bomb experiment.
+
 ### Key Event Timeline
 
 | Time | Event |
