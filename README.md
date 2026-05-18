@@ -137,9 +137,12 @@ requiring ~26,500 solver steps to reach 10 ms. With the fixed step the run compl
 **Gas temperature field and droplet cloud at t = 0.15 ms (peak injection):**
 ![Spray particles](spray_particles.png)
 
-Droplets are coloured by diameter. The narrow 10° cone is visible injecting downward from
-the top. Gas temperature is shown in the background — at this early time the gas is still
-at ~800 K and combustion has not yet started.
+This is a side-view (axial–radial) cross-section. The horizontal axis is the axial Y
+coordinate (mm) and the vertical axis is radial distance R from the chamber centreline.
+The injector sits at Y = 99.5 mm, R = 0 (right edge, centreline), injecting leftward
+(−Y direction) with a 10° half-cone angle that opens radially outward. Droplets are
+coloured by diameter; gas temperature is shown in the background — at this early time
+the gas is still at ~800 K and combustion has not yet started.
 
 **Animation of the full event (0–10 ms):**
 
